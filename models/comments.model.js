@@ -10,7 +10,7 @@ const commentSchema = new mongoose.Schema({
         ref:"User",
     },
     QuestionId:{
-        type:mongoose.SchemaTypes.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"Question",
     },
     AnswerId:{
@@ -22,5 +22,5 @@ const commentSchema = new mongoose.Schema({
     timeStamps:true,
 });
 
-const comment = monngoose.model("comment",commentSchema);
-export default comment;
+const Comment = mongoose.model("comment",commentSchema);
+export default Comment;
